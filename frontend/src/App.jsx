@@ -7,17 +7,25 @@ import CityComparison from './pages/CityComparison'
 import NetWorth from './pages/NetWorth'
 
 const TABS = [
-  { id: 'dashboard', label: 'Dashboard', color: 'purple' },
-  { id: 'budget', label: 'Monthly Budget', color: 'green' },
-  { id: 'annual', label: 'Annual Plan', color: 'amber' },
-  { id: 'city', label: 'City Comparison', color: 'red' },
-  { id: 'networth', label: 'Net Worth', color: 'gold' },
+  { id: 'dashboard', label: 'Dashboard', icon: '◉', color: 'purple' },
+  { id: 'budget', label: 'Monthly Budget', icon: '◎', color: 'green' },
+  { id: 'annual', label: 'Annual Plan', icon: '◈', color: 'amber' },
+  { id: 'city', label: 'City Comparison', icon: '◇', color: 'red' },
+  { id: 'networth', label: 'Net Worth', icon: '◆', color: 'gold' },
 ]
 
 function App() {
   const [tab, setTab] = useState('dashboard')
   const [data, setData] = useState(null)
   const [saveMsg, setSaveMsg] = useState(false)
+  const [theme, setTheme] = useState(() => localStorage.getItem('theme') || 'dark')
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme)
+    localStorage.setItem('theme', theme)
+  }, [theme])
+
+  const toggleTheme = () => setTheme(t => t === 'dark' ? 'light' : 'dark')
 
   const fetchData = useCallback(async () => {
     const res = await fetch('/api/data')
@@ -51,20 +59,27 @@ function App() {
     e.target.value = ''
   }
 
-  if (!data) return <div style={{ padding: 40, textAlign: 'center', color: '#8b949e' }}>Loading...</div>
+  if (!data) return (
+    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh', color: 'var(--gray)', fontSize: 16 }}>
+      <div className="loading-spinner" />
+    </div>
+  )
 
   return (
     <>
       <div className="toolbar">
         <span className="title">Budget Tracker</span>
         <span className={`save-msg ${saveMsg ? 'show' : ''}`}>Saved</span>
-        <label className="btn btn-green" style={{ cursor: 'pointer' }}>
+        <button className="theme-toggle" onClick={toggleTheme} title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}>
+          {theme === 'dark' ? '☀' : '☾'}
+        </button>
+        <label className="btn btn-outline" style={{ cursor: 'pointer' }}>
           Import .xlsx
           <input type="file" accept=".xlsx" onChange={handleImport} style={{ display: 'none' }} />
         </label>
-        <button className="btn btn-purple" onClick={handleExport}>Export .xlsx</button>
+        <button className="btn btn-primary" onClick={handleExport}>Export .xlsx</button>
       </div>
-      <div className="tabs">
+      <nav className="tabs">
         {TABS.map(t => (
           <button
             key={t.id}
@@ -72,15 +87,18 @@ function App() {
             data-color={t.color}
             onClick={() => setTab(t.id)}
           >
+            <span className="tab-icon">{t.icon}</span>
             {t.label}
           </button>
         ))}
-      </div>
-      {tab === 'dashboard' && <Dashboard data={data} onSave={saveAndRefresh} />}
-      {tab === 'budget' && <MonthlyBudget data={data} onSave={saveAndRefresh} />}
-      {tab === 'annual' && <AnnualPlan data={data} />}
-      {tab === 'city' && <CityComparison data={data} onSave={saveAndRefresh} />}
-      {tab === 'networth' && <NetWorth data={data} onSave={saveAndRefresh} />}
+      </nav>
+      <main>
+        {tab === 'dashboard' && <Dashboard data={data} onSave={saveAndRefresh} />}
+        {tab === 'budget' && <MonthlyBudget data={data} onSave={saveAndRefresh} />}
+        {tab === 'annual' && <AnnualPlan data={data} />}
+        {tab === 'city' && <CityComparison data={data} onSave={saveAndRefresh} />}
+        {tab === 'networth' && <NetWorth data={data} onSave={saveAndRefresh} />}
+      </main>
     </>
   )
 }
