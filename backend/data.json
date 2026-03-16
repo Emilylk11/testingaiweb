@@ -1,0 +1,333 @@
+{
+  "income": {
+    "annual_salary": 78000.0,
+    "pay_frequency": 26,
+    "savings_per_paycheck": 700.0,
+    "tulsa_grant_annual": 10000.0,
+    "state_tax_rate": 0.0475,
+    "federal_tax_rate": 0.18
+  },
+  "savings_allocation": [
+    {
+      "category": "House Down Payment",
+      "monthly": 1200.0
+    },
+    {
+      "category": "Car Fund",
+      "monthly": 150.0
+    },
+    {
+      "category": "Travel Fund",
+      "monthly": 200.0
+    },
+    {
+      "category": "Emergency Fund",
+      "monthly": 300.0
+    },
+    {
+      "category": "General Savings",
+      "monthly": 100.0
+    }
+  ],
+  "savings_goals": [
+    {
+      "category": "House Down Payment",
+      "target": 60000.0,
+      "saved": 5000.0
+    },
+    {
+      "category": "Car Fund",
+      "target": 15000.0,
+      "saved": 2000.0
+    },
+    {
+      "category": "Travel Fund",
+      "target": 5000.0,
+      "saved": 800.0
+    },
+    {
+      "category": "Emergency Fund",
+      "target": 10000.0,
+      "saved": 3000.0
+    },
+    {
+      "category": "General Savings",
+      "target": 5000.0,
+      "saved": 500.0
+    }
+  ],
+  "monthly_budget": {
+    "month": "January",
+    "categories": [
+      {
+        "section": "HOUSING & UTILITIES",
+        "items": [
+          {
+            "name": "Rent / Mortgage",
+            "budgeted": 900.0,
+            "actual": 0.0
+          },
+          {
+            "name": "Electric",
+            "budgeted": 80.0,
+            "actual": 0.0
+          },
+          {
+            "name": "Water / Trash",
+            "budgeted": 40.0,
+            "actual": 0.0
+          },
+          {
+            "name": "Internet",
+            "budgeted": 60.0,
+            "actual": 0.0
+          },
+          {
+            "name": "Renter's Insurance",
+            "budgeted": 15.0,
+            "actual": 0.0
+          }
+        ]
+      },
+      {
+        "section": "FOOD",
+        "items": [
+          {
+            "name": "Groceries",
+            "budgeted": 300.0,
+            "actual": 0.0
+          },
+          {
+            "name": "Dining Out",
+            "budgeted": 100.0,
+            "actual": 0.0
+          },
+          {
+            "name": "Coffee / Snacks",
+            "budgeted": 30.0,
+            "actual": 0.0
+          }
+        ]
+      },
+      {
+        "section": "TRANSPORTATION",
+        "items": [
+          {
+            "name": "Gas",
+            "budgeted": 80.0,
+            "actual": 0.0
+          },
+          {
+            "name": "Car Insurance",
+            "budgeted": 120.0,
+            "actual": 0.0
+          },
+          {
+            "name": "Car Maintenance",
+            "budgeted": 50.0,
+            "actual": 0.0
+          },
+          {
+            "name": "Parking / Tolls",
+            "budgeted": 15.0,
+            "actual": 0.0
+          }
+        ]
+      },
+      {
+        "section": "SUBSCRIPTIONS & TECH",
+        "items": [
+          {
+            "name": "Phone Plan",
+            "budgeted": 50.0,
+            "actual": 0.0
+          },
+          {
+            "name": "Streaming Services",
+            "budgeted": 30.0,
+            "actual": 0.0
+          },
+          {
+            "name": "Software / Apps",
+            "budgeted": 15.0,
+            "actual": 0.0
+          },
+          {
+            "name": "Cloud Storage",
+            "budgeted": 5.0,
+            "actual": 0.0
+          }
+        ]
+      },
+      {
+        "section": "PERSONAL CARE",
+        "items": [
+          {
+            "name": "Health Insurance",
+            "budgeted": 0.0,
+            "actual": 0.0
+          },
+          {
+            "name": "Gym / Fitness",
+            "budgeted": 35.0,
+            "actual": 0.0
+          },
+          {
+            "name": "Haircuts / Grooming",
+            "budgeted": 25.0,
+            "actual": 0.0
+          },
+          {
+            "name": "Medical / Dental",
+            "budgeted": 30.0,
+            "actual": 0.0
+          }
+        ]
+      },
+      {
+        "section": "ENTERTAINMENT & FUN",
+        "items": [
+          {
+            "name": "Activities / Events",
+            "budgeted": 50.0,
+            "actual": 0.0
+          },
+          {
+            "name": "Hobbies",
+            "budgeted": 30.0,
+            "actual": 0.0
+          },
+          {
+            "name": "Gifts",
+            "budgeted": 25.0,
+            "actual": 0.0
+          }
+        ]
+      },
+      {
+        "section": "TRAVEL",
+        "items": [
+          {
+            "name": "Travel Fund Spending",
+            "budgeted": 0.0,
+            "actual": 0.0
+          }
+        ]
+      }
+    ]
+  },
+  "net_worth": {
+    "assets": [
+      {
+        "name": "Checking Account",
+        "value": 2500.0
+      },
+      {
+        "name": "Savings / HYSA",
+        "value": 5000.0
+      },
+      {
+        "name": "House Down Payment Fund",
+        "value": 5000.0
+      },
+      {
+        "name": "Car Fund",
+        "value": 2000.0
+      },
+      {
+        "name": "Travel Fund",
+        "value": 800.0
+      },
+      {
+        "name": "Emergency Fund",
+        "value": 3000.0
+      },
+      {
+        "name": "General Savings",
+        "value": 500.0
+      },
+      {
+        "name": "401(k)",
+        "value": 8000.0
+      },
+      {
+        "name": "Investments / Brokerage",
+        "value": 1500.0
+      }
+    ],
+    "liabilities": [
+      {
+        "name": "Car Loan",
+        "value": 0.0
+      },
+      {
+        "name": "Student Loans",
+        "value": 0.0
+      },
+      {
+        "name": "Credit Cards",
+        "value": 0.0
+      },
+      {
+        "name": "Other Debt",
+        "value": 0.0
+      }
+    ]
+  },
+  "city_comparison": [
+    {
+      "category": "Rent (1BR)",
+      "dallas": 1200.0,
+      "tulsa": 900.0,
+      "nw_arkansas": 950.0
+    },
+    {
+      "category": "Grant Offset",
+      "dallas": 0.0,
+      "tulsa": -833.0,
+      "nw_arkansas": 0.0
+    },
+    {
+      "category": "Utilities",
+      "dallas": 150.0,
+      "tulsa": 120.0,
+      "nw_arkansas": 125.0
+    },
+    {
+      "category": "Groceries",
+      "dallas": 350.0,
+      "tulsa": 280.0,
+      "nw_arkansas": 290.0
+    },
+    {
+      "category": "Gas (monthly)",
+      "dallas": 100.0,
+      "tulsa": 75.0,
+      "nw_arkansas": 80.0
+    },
+    {
+      "category": "Car Insurance",
+      "dallas": 140.0,
+      "tulsa": 100.0,
+      "nw_arkansas": 110.0
+    },
+    {
+      "category": "Dining Out",
+      "dallas": 120.0,
+      "tulsa": 80.0,
+      "nw_arkansas": 85.0
+    },
+    {
+      "category": "State Tax Rate",
+      "dallas": 0.0,
+      "tulsa": 0.0475,
+      "nw_arkansas": 0.047
+    },
+    {
+      "category": "Avg Home Price",
+      "dallas": 350000.0,
+      "tulsa": 210000.0,
+      "nw_arkansas": 240000.0
+    }
+  ]
+}
